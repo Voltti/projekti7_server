@@ -1,4 +1,5 @@
 version: "3"
+name: "Ryhma-4-Projekti"
 services:
   client:
     image: juunis/test-client-image
@@ -6,10 +7,10 @@ services:
     container_name: ryhma-4-client
     restart: always
     ports:
-      - "80:80"
+      - "8080:80"
   server:
     image: juunis/test-server-image
     build: .
     container_name: ryhma-4-server
     ports:
-      - "5000:80"
+      - "5000:5000"
