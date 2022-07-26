@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: ryhma-4-cluster
+  region: eu-west-3
+
+availabilityZones: ["eu-west-3a", "eu-west-3b", "eu-west-3c"]
+
+nodeGroups:
+  - name: ryhma4
+    instanceType: t2.micro
+    # desiredCapasity: 3
+    minSize: 1
+    maxSize: 1
+    # ssh:
+    #   allow: true
