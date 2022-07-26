@@ -1,16 +1,13 @@
 version: "3"
-name: "Ryhma-4-Projekti"
+name: Ryhma-4-Projekti
 services:
   client:
-    image: juunis/test-client-image
-    build: .
+    image: supervoltti/ryhma4-client
     container_name: ryhma-4-client
-    restart: always
     ports:
       - "8080:80"
   server:
-    image: juunis/test-server-image
-    build: .
+    image: supervoltti/ryhma4-server
     container_name: ryhma-4-server
     ports:
       - "5000:5000"
