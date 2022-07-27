@@ -18,7 +18,7 @@ spec:
       containers:
         - image: supervoltti/ryhma4-server
           imagePullPolicy: Always
-          name: client
+          name: server
           ports:
             - containerPort: 5000
               protocol: TCP
