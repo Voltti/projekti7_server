@@ -9,11 +9,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ryhma4-server
+      app: ryhma4
   template:
     metadata:
       labels:
-        app: ryhma4-server
+        app: ryhma4
     spec:
       containers:
         - image: supervoltti/ryhma4-server

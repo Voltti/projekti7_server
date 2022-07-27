@@ -4,10 +4,10 @@ metadata:
   name: ryhma4-server
   namespace: default
   labels:
-    app: ryhma4-server
+    app: ryhma4
 spec:
   selector:
-    app: ryhma4-server
+    app: ryhma4
   ports:
     - protocol: TCP
       port: 5000
