@@ -8,7 +8,6 @@ metadata:
 availabilityZones: ["eu-west-3a", "eu-west-3b", "eu-west-3c"]
 
 managedNodeGroups:
-
   - name: nodegroup
     desiredCapacity: 4
     instanceType: t2.micro
