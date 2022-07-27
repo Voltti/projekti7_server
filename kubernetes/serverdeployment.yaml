@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ryhma4-server
   labels:
-    app: ryhma4-server
+    app: ryhma4
   namespace: default
 spec:
   replicas: 1
