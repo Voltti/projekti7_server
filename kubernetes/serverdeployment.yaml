@@ -22,3 +22,19 @@ spec:
           ports:
             - containerPort: 5000
               protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ryhma4-server-service
+  namespace: default
+  labels:
+    app: ryhma4-server-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  selector:
+    app: ryhma4-server-pod
