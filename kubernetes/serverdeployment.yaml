@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: ryhma4-server
   labels:
-    app: ryhma4-server
+    app: ryhma4
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ryhma4-server
+      app: ryhma4-server-pod
   template:
     metadata:
       labels:
-        app: ryhma4-server
+        app: ryhma4-server-pod
     spec:
       containers:
         - image: supervoltti/ryhma4-server
@@ -22,3 +22,19 @@ spec:
           ports:
             - containerPort: 5000
               protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ryhma4-server-service
+  namespace: default
+  labels:
+    app: ryhma4-server-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  selector:
+    app: ryhma4-server-pod
