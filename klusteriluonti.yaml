@@ -7,11 +7,7 @@ metadata:
 
 availabilityZones: ["eu-west-3a", "eu-west-3b", "eu-west-3c"]
 
-nodeGroups:
-  - name: ryhma4
+managedNodeGroups:
+  - name: nodegroup
+    desiredCapacity: 4
     instanceType: t2.micro
-    # desiredCapasity: 3
-    minSize: 1
-    maxSize: 1
-    # ssh:
-    #   allow: true

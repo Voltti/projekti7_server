@@ -1,0 +1,13 @@
+version: "3"
+name: Ryhma-4-Projekti
+services:
+  client:
+    image: supervoltti/ryhma4-client
+    container_name: ryhma-4-client
+    ports:
+      - "8080:80"
+  server:
+    image: supervoltti/ryhma4-server
+    container_name: ryhma-4-server
+    ports:
+      - "5000:5000"
